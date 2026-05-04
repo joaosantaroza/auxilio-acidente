@@ -247,23 +247,29 @@ strong { font-weight: 700; color: var(--azul); }
   gap: 14px;
 }
 .photo-frame {
-  width: min(320px, 100%);
+  width: min(280px, 100%);
   aspect-ratio: 4/5;
   border-radius: var(--radius);
   background: var(--azul);
+  color: var(--dourado);
   position: relative;
   overflow: hidden;
   box-shadow: var(--shadow-lg);
   border: 4px solid var(--branco);
   outline: 2px solid var(--dourado);
 }
-.photo-frame img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
+.photo-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: rgba(200,164,86,.6);
 }
+.photo-placeholder svg { width: 80px; height: 80px; color: rgba(200,164,86,.6); }
+.photo-placeholder span { font-size: 12px; letter-spacing: .15em; text-transform: uppercase; }
 .photo-caption { text-align: center; font-size: 14px; color: var(--cinza); margin: 0; }
 .photo-caption strong { color: var(--azul); }
 
@@ -469,21 +475,17 @@ strong { font-weight: 700; color: var(--azul); }
 }
 .lawyer-photo {
   width: 160px;
-  height: 160px;
+  aspect-ratio: 1/1;
   border-radius: 50%;
   background: var(--azul);
+  color: rgba(200,164,86,.5);
+  display: grid;
+  place-items: center;
   margin: 0 auto;
   outline: 3px solid var(--dourado);
   outline-offset: 4px;
-  overflow: hidden;
 }
-.lawyer-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 20%;
-  display: block;
-}
+.lawyer-photo svg { width: 70%; height: 70%; }
 .lawyer-info h3 { font-size: 22px; margin-bottom: 4px; }
 .lawyer-oab {
   display: inline-block;

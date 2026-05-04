@@ -9,8 +9,7 @@
 (function () {
   'use strict';
 
-  // ⚠️ Substituir pelo número real do WhatsApp do escritório (formato internacional, só dígitos)
-  var WA_NUMBER = '5541000000000';
+  var WA_NUMBER = '5544999969598';
   var WA_MESSAGE = 'Olá! Vi a página sobre auxílio-acidente e gostaria de tirar uma dúvida.';
 
   function buildWaUrl() {
